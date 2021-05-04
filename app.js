@@ -8,9 +8,6 @@ const mongoose = require('mongoose');
 
 //console.log(process.env.DATABASEURL);
 var url = process.env.DATABASEURL;
-//mongoose.connect('mongodb://localhost/yelp_camp', {useNewUrlParser: true, useUnifiedTopology: true});
-// mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test
-// mongoose.connect('mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test', {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // SCHEMA
@@ -61,13 +58,6 @@ app.use(express.static(__dirname+"/public"));
 
 app.use(bodyParser.urlencoded({extended:true}));
 
-
-// var campgrounds = [
-//     {name: "A", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDtHxyjWqrH5cL1r5-HO0hSE4AYL2sf-qwTw&usqp=CAU"},    
-//     {name: "B", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlghk71oTTyUvW2bLWXeYhOlwyeklq8tfa0g&usqp=CAU"},
-//     {name: "C", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKcFj7bzJh29DeekT9twVUDRzKpQtIHgx9JA&usqp=CAU"}
-//]
-
 app.set("view engine", "ejs");
 
 app.use("/",indexRoutes);
@@ -76,6 +66,7 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 
 app.listen(process.env.PORT,process.env.IP);
 
+// to run in your local machine
 // app.listen(3000,function(){
 //     console.log("Yelpcamp Server started! http://localhost:3000/");
 // });
