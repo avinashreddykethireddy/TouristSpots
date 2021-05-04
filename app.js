@@ -6,12 +6,12 @@ var flash = require("connect-flash");
 // DATA BASE SETUP
 const mongoose = require('mongoose');
 
-console.log(process.env.DATABASEURL);
-
+//console.log(process.env.DATABASEURL);
+var url = process.env.DATABASEURL;
 //mongoose.connect('mongodb://localhost/yelp_camp', {useNewUrlParser: true, useUnifiedTopology: true});
 // mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test
 // mongoose.connect('mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test', {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect('process.env.DATABASEURL', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // SCHEMA
 var Campground = require("./models/campground");
