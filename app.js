@@ -5,8 +5,9 @@ var methodOverride = require('method-override');
 var flash = require("connect-flash");
 // DATA BASE SETUP
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/yelp_camp', {useNewUrlParser: true, useUnifiedTopology: true});
-
+// mongoose.connect('mongodb://localhost/yelp_camp', {useNewUrlParser: true, useUnifiedTopology: true});
+// mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test
+mongoose.connect('mongodb+srv://yelpcamp_mongo:Rama2001@yelpcamp.p4a8z.mongodb.net/test', {useNewUrlParser: true, useUnifiedTopology: true});
 // SCHEMA
 var Campground = require("./models/campground");
 var Comment = require("./models/comment");
