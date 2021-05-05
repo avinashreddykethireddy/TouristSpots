@@ -36,7 +36,7 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 50s linear infinite; 
+    animation: imageAnimation 25s linear infinite; 
 }
 
 .slideshow li:nth-child(1) { 
