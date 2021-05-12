@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 //console.log(process.env.DATABASEURL);
 var url = process.env.DATABASEURL;
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost/yelp_camp', {useNewUrlParser: true, useUnifiedTopology: true});
 
 // SCHEMA
 var Campground = require("./models/campground");
