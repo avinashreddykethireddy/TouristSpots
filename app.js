@@ -69,7 +69,7 @@ app.listen(process.env.PORT,process.env.IP);
 
 // to run in your local machine
 // app.listen(3000,function(){
-//     console.log("Yelpcamp Server started! http://localhost:3000/");
+//     console.log("Server started! http://localhost:3000/");
 // });
 
 //
